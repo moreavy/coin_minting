@@ -26,6 +26,15 @@ minetest.register_tool(modname..":hammer", {
     },
 })
 
+minetest.register_craft({
+    output = modname..":hammer",
+    recipe = {
+        {"default:steel_ingot","default:steel_ingot","default:steel_ingot"},
+        {"default:steel_ingot","default:stick","default:steel_ingot"},
+        {"","default:stick",""},
+    },
+})
+
 function coin_minting.register_coin(properties)
     minetest.register_craftitem(modname..":coin_"..properties.name, {
         description = properties.description,
