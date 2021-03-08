@@ -55,6 +55,7 @@ function coin_minting.register_mold(properties)
         description = properties.description,
         tiles = properties.images,
         groups = {mold = 1},
+        is_ground_content = flase,
     })
 
     minetest.register_craft({
