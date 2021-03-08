@@ -2,15 +2,6 @@ local modname = minetest.get_current_modname()
 local modpath = minetest.get_modpath(modname).."/"
 coin_minting = {}
 
-function table.map(tab, func)
-    local mapped = {}
-    for i, value in ipairs(tab) do
-        mapped[i] = func(value)
-    end
-    return mapped
-end
-  
-
 minetest.register_tool(modname..":hammer", {
     description = "Minting Hammer",
     inventory_image = "coin_minting_hammer.png",
