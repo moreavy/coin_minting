@@ -48,3 +48,20 @@ minetest.register_craft({
         {"coin_minting:coin_basic","coin_minting:coin_basic","coin_minting:coin_basic",},
     },
 })
+
+minetest.register_craft({
+    output = "coin_minting:coin_basic 3",
+    recipe = {
+        {"coin_minting:coin_gold",},
+        {"coin_minting:coin_gold",},
+    },
+})
+
+minetest.register_craft({
+    output = "coin_minting:coin_gold 2",
+    recipe = {
+        {"coin_minting:coin_basic",},
+        {"coin_minting:coin_basic",},
+        {"coin_minting:coin_basic",},
+    },
+})
