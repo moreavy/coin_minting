@@ -10,7 +10,7 @@ coin_minting.register_mold({
 })
 
 coin_minting.register_coin({
-    name = "gold_coin",
+    name = "gold",
     description = "Gold Coin",
     img_file_path = "coin_minting_gold_coin.png",
     mold_name = "gold_coin",
@@ -29,8 +29,22 @@ coin_minting.register_mold({
 })
 
 coin_minting.register_coin({
-    name = "basic_coin",
+    name = "basic",
     description = "Coin",
     img_file_path = "coin_minting_coin.png",
     mold_name = "basic_coin",
+})
+
+minetest.register_craft({
+    output = "coin_minting:coin_basic 3",
+    recipe = {
+        {"coin_minting:coin_gold","coin_minting:coin_gold",},
+    },
+})
+
+minetest.register_craft({
+    output = "coin_minting:coin_gold 2",
+    recipe = {
+        {"coin_minting:coin_basic","coin_minting:coin_basic","coin_minting:coin_basic",},
+    },
 })
